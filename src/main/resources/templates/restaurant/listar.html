@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang="br" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="~{base :: head}"></head>
+<body>
+<nav th:replace="~{base :: nav}"></nav>
+
+<H1>Listar</H1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Nome</th>
+    <th scope="col">Endereço</th>
+    <th scope="col">Cidade</th>
+    <th scope="col">Estado</th>
+    <th scope="col">CEP</th>
+    <th scope="col">Avaliação</th>
+  </tr>
+  </thead>
+  <tbody>
+
+      <div th:each="restaurant : ${lista}">
+
+        <tr>
+          <td><span th:text="${restaurant.id}"></span></td>
+          <td><span th:text="${restaurant.name}"></span></td>
+          <td><span th:text="${restaurant.address}"></span></td>
+          <td><span th:text="${restaurant.city}"></span></td>
+          <td><span th:text="${restaurant.state}"></span></td>
+          <td><span th:text="${restaurant.zipCode}"></span></td>
+          <td><span th:text="${restaurant.mediaAvaliacao}"></span></td>
+        </tr>
+
+      </div>
+
+  </tbody>
+</table>
+
+</body>
+</html>

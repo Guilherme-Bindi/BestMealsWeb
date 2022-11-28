@@ -21,7 +21,7 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" th:fragment="nav">
         <!-- Brand -->
-        <a class="navbar-brand" href="/restaurant">BestMealsWeb</a>
+        <a class="navbar-brand" href="/">BestMealsWeb</a>
 
         <!-- Links -->
         <ul class="navbar-nav">
@@ -31,10 +31,12 @@
                     Restaurante
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/restaurant">Buscar</a>
+                    <a class="dropdown-item" href="/restaurant/buscar">Buscar</a>
                     <a class="dropdown-item" href="/restaurant/form">Cadastrar</a>
-                    <a class="dropdown-item" href="#">Apagar</a>
+                    <a class="dropdown-item" href="/restaurant/apagar">Apagar</a>
                     <a class="dropdown-item" href="#">Avaliações</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/restaurant/listar">Listar todos</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -46,6 +48,25 @@
                     <a class="dropdown-item" href="#">Cadastrar</a>
                     <a class="dropdown-item" href="#">Apagar</a>
                     <a class="dropdown-item" href="#">Avaliações</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="RestaurantEval" data-toggle="dropdown">
+                    Avaliação de Restaurante
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Buscar</a>
+                    <a class="dropdown-item" href="#">Cadastrar</a>
+                    <a class="dropdown-item" href="#">Apagar</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="MealEval" data-toggle="dropdown">
+                    Avaliação de Refeições
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Buscar</a>
+                    <a class="dropdown-item" href="#">Cadastrar</a>
                 </div>
             </li>
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:include="~{base::head}">
+    <meta charset="UTF-8">
+    <title>Cadastra Restaurant</title>
+</head>
+<body>
+<nav th:replace="~{base::nav}"></nav>
+
+    <H1>Cadastrar</H1>
+
+        <form th:object="${restaurantDTO}" action="/restaurant" method="POST">
+            <div>Id: <input th:field="*{id}" th:errorClass="is-invalid" class="form-control" />
+                <div class="invalid-feedback" th:errors="*{id}"/>
+            </div>
+            <div>Nome: <input th:field="*{name}" th:errorClass="is-invalid" class="form-control" placeholder="Nome do Restaurante"/>
+                <div class="invalid-feedback" th:errors="*{name}"/>
+            </div>
+            <div>Endereço: <input th:field="*{address}" th:errorClass="is-invalid" class="form-control">
+                <div class="invalid-feedback" th:errors="*{address}"/>
+            </div>
+            <div>Cidade: <input th:field="*{city}" th:errorClass="is-invalid" class="form-control">
+                <div class="invalid-feedback" th:errors="*{city}"/>
+            </div>
+            <div>Estado: <input th:field="*{state}" th:errorClass="is-invalid" class="form-control">
+                <div class="invalid-feedback" th:errors="*{state}"/>
+            </div>
+            <div>CEP: <input th:field="*{zipCode}" th:errorClass="is-invalid" class="form-control">
+                <div class="invalid-feedback" th:errors="*{zipCode}"/>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+</body>
+</html>

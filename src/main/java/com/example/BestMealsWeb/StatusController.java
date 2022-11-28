@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 public class StatusController {
 
-    @GetMapping
+    @GetMapping()
     public String getIndex(Model model){
         return "index";
     }

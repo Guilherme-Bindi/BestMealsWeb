@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang="br" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="~{base :: head}"></head>
+<body>
+<nav th:replace="~{base :: nav}"></nav>
+
+<H1>Buscar</H1>
+
+<form th:object="${id}" action="/restaurant/buscar" method="POST">
+
+  <div>ID: <input name="id"></div>
+
+  <button action="submit()" >Buscar</button>
+</form>
+
+</body>
+</html>
